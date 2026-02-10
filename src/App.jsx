@@ -34,7 +34,7 @@ function App() {
     "We will hang out together 🎭",
     "I will buy you chocolates 🍫",
     "I will give you roses 🌹",
-    "What if I give you a teddy? 🧸",
+    "How About a teddy? 🧸",
     // "I will take you to dinner 🍽️",
     // "We'll watch the sunset together 🌅",
     // "I'll hold your hand all day ❤️",

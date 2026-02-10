@@ -125,7 +125,7 @@ function CelebrationScreen({ girlName, reduceMotion }) {
 
       <div className="celebration-content">
         <h1 className="congrats-message">YES, {girlName}! 🎉</h1>
-        <p className="love-message">I love you, {girlName}.</p>
+        <p className="love-message">So… when do I finally get to see you?</p>
 
         {showSecondStage && (
           <div className="second-stage">
@@ -133,7 +133,8 @@ function CelebrationScreen({ girlName, reduceMotion }) {
               <>
                 <h2>💕 A Special Plan for Us</h2>
                 <p className="plan-text">
-                  Here's a little plan for us, {girlName}: a walk by the river, cozy dinner, and a surprise under the stars.
+                  We'll go for a movie together 🎬😌
+                  {/* Here's a little plan for us, {girlName}: a walk by the river, cozy dinner, and a surprise under the stars. */}
                 </p>
                 <button className="reveal-more-btn" onClick={handleRevealMore}>
                   Reveal More
@@ -143,9 +144,9 @@ function CelebrationScreen({ girlName, reduceMotion }) {
               <>
                 <h2>One Last Thing 💖</h2>
                 <p className="plan-text">
-                  I can't wait to hear your voice, {girlName}. Please call me! ☎️
+                  So… what do you think? 🥰
                 </p>
-                <p style={{ fontSize: '1.3rem', marginTop: '20px' }}>I love you! 💕</p>
+                <p style={{ fontSize: '1.3rem', marginTop: '20px' }}>I am looking forward to our time together!</p>
               </>
             )}
           </div>
