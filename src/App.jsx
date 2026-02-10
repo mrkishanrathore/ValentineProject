@@ -11,6 +11,7 @@ function App() {
   const [messageIndex, setMessageIndex] = useState(0)
   const [noButtonScale, setNoButtonScale] = useState(1)
   const [yesButtonScale, setYesButtonScale] = useState(1)
+  const [noClickCount, setNoClickCount] = useState(0)
 
   const minNoScale = 0.3
   const maxYesScale = 2
@@ -37,7 +38,6 @@ function App() {
     "I want to create beautiful memories with you! 📸",
     "You are my sunshine on a cloudy day! ☀️",
     "I will always be there for you! 🤗",
-    "You are the love of my life! 💘",
     "Please give me a chance to make you happy! 🌟"
   ]
 
@@ -94,6 +94,7 @@ function App() {
   }
 
   const handleNo = () => {
+    setNoClickCount((prev) => prev + 1)
     setMessageIndex((prev) => (prev + 1) % giftMessages.length)
     setNoButtonScale((prev) => Math.max(minNoScale, prev - scaleDecrement))
     setYesButtonScale((prev) => Math.min(maxYesScale, prev + scaleIncrement))
@@ -116,6 +117,7 @@ function App() {
             noButtonScale={noButtonScale}
             yesButtonScale={yesButtonScale}
             giftMessages={giftMessages}
+            noClickCount={noClickCount}
             onYes={handleYes}
             onNo={handleNo}
             onSettings={() => setShowSettingsModal(true)}

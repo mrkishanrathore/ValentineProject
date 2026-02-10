@@ -7,6 +7,7 @@ function MainScreen({
   noButtonScale,
   yesButtonScale,
   giftMessages,
+  noClickCount,
   onYes,
   onNo,
   onSettings
@@ -57,6 +58,10 @@ function MainScreen({
 
   const handleNoClick = () => {
     onNo()
+    // After 5 clicks, move the button on every click
+    if (noClickCount >= 5) {
+      moveNoButton()
+    }
     if (questionRef.current) {
       questionRef.current.style.animation = 'none'
       setTimeout(() => {
@@ -68,7 +73,7 @@ function MainScreen({
   }
 
   const currentMessage = messageIndex === 0 
-    ? `Will you go out with me on Valentine's Day, ${girlName}?`
+    ? ` ${girlName}, Will you be My Valentine?`
     : giftMessages[messageIndex]
 
   return (
