@@ -4,6 +4,7 @@ import MainScreen from './components/MainScreen'
 import CelebrationScreen from './components/CelebrationScreen'
 import SettingsModal from './components/SettingsModal'
 import VideoModal from './components/VideoModal'
+import glitchVideo from './assets/video/GlitchVideo.mp4'
 
 function App() {
   const [girlName, setGirlName] = useState('My Love')
@@ -16,8 +17,8 @@ function App() {
   const [noClickCount, setNoClickCount] = useState(0)
   const [cycleCount, setCycleCount] = useState(0)
   
-  // Add your video URL here
-  const videoUrl = 'https://example.com/your-video.mp4' // Change this to your video URL
+  // Import video from assets
+  const videoUrl = glitchVideo
 
   const minNoScale = 0.3
   const maxYesScale = 2
