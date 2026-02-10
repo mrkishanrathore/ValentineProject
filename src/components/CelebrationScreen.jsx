@@ -144,7 +144,7 @@ function CelebrationScreen({ girlName, reduceMotion }) {
               <>
                 <h2>One Last Thing 💖</h2>
                 <p className="plan-text">
-                  So… what do you think? 🥰
+                  So… what do you think? 🤔
                 </p>
                 <p style={{ fontSize: '1.3rem', marginTop: '20px' }}>I am looking forward to our time together!</p>
               </>

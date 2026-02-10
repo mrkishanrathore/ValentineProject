@@ -46,8 +46,12 @@ function App() {
     // "I will cherish you forever! 🌹",
     // "I want to create beautiful memories with you! 📸",
     // "You are my sunshine on a cloudy day! ☀️",
-    "I will always be there for you! 🤗",
-    "Please give me a chance to make you happy! 🌟"
+    // "I will always be there for you! 🤗",
+    // "Please give me a chance to make you happy! 🌟"
+    "You're not allowed to say no 😉✨",
+    "Don't say no cutie 😘",
+    "I know you want to say yes 😍",
+    "This will be your last no 😇",
   ]
 
   // Load girlName from backend on mount
