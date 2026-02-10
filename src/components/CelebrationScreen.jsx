@@ -4,6 +4,7 @@ import './CelebrationScreen.css'
 function CelebrationScreen({ girlName, reduceMotion }) {
   const canvasRef = useRef(null)
   const [showSecondStage, setShowSecondStage] = useState(false)
+  const [showCallMessage, setShowCallMessage] = useState(false)
   const particlesRef = useRef([])
 
   useEffect(() => {
@@ -114,6 +115,10 @@ function CelebrationScreen({ girlName, reduceMotion }) {
     }
   }, [reduceMotion])
 
+  const handleRevealMore = () => {
+    setShowCallMessage(true)
+  }
+
   return (
     <div className="celebration-screen">
       <canvas ref={canvasRef} className="fireworks-canvas"></canvas>
@@ -124,13 +129,25 @@ function CelebrationScreen({ girlName, reduceMotion }) {
 
         {showSecondStage && (
           <div className="second-stage">
-            <h2>💕 A Special Plan for Us</h2>
-            <p className="plan-text">
-              Here's a little plan for us, {girlName}: a walk by the river, cozy dinner, and a surprise under the stars.
-            </p>
-            <button className="reveal-more-btn">
-              Reveal More
-            </button>
+            {!showCallMessage ? (
+              <>
+                <h2>💕 A Special Plan for Us</h2>
+                <p className="plan-text">
+                  Here's a little plan for us, {girlName}: a walk by the river, cozy dinner, and a surprise under the stars.
+                </p>
+                <button className="reveal-more-btn" onClick={handleRevealMore}>
+                  Reveal More
+                </button>
+              </>
+            ) : (
+              <>
+                <h2>One Last Thing 💖</h2>
+                <p className="plan-text">
+                  I can't wait to hear your voice, {girlName}. Please call me! ☎️
+                </p>
+                <p style={{ fontSize: '1.3rem', marginTop: '20px' }}>I love you! 💕</p>
+              </>
+            )}
           </div>
         )}
       </div>
