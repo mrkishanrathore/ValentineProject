@@ -47,6 +47,16 @@ function App() {
   }, [])
 
   const loadNameFromFile = async () => {
+    // Check if name is passed in URL
+    const params = new URLSearchParams(window.location.search)
+    const urlName = params.get('name')
+    
+    if (urlName) {
+      setGirlName(decodeURIComponent(urlName))
+      return
+    }
+    
+    // Otherwise, load from file
     try {
       const response = await fetch('http://localhost:3000/api/name')
       if (response.ok) {
